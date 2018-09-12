@@ -18,4 +18,4 @@
 
 #pragma once
 
-enum { QWERTY };
+enum { GAMING, QWERTY, SYMBOLS, FN };

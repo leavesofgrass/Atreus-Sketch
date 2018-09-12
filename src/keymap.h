@@ -33,33 +33,45 @@
 
 /* *INDENT-OFF* */
 KEYMAPS(
-  [0] = KEYMAP_STACKED
+  [GAMING] = KEYMAP_STACKED
   (
+       Key_1  ,Key_2 ,Key_3 ,Key_4 ,Key_5
+      ,Key_Q  ,Key_W ,Key_E ,Key_R ,Key_T
+      ,Key_A  ,Key_S ,Key_D ,Key_F ,Key_G
+      ,Key_Z  ,Key_X ,Key_C ,Key_V ,Key_B ,Key_LeftShift
+
+                       ,Key_6 ,Key_7 ,Key_8     ,Key_9     ,Key_0
+                       ,Key_Y ,Key_U ,Key_I     ,Key_O     ,Key_P
+                       ,Key_H ,Key_J ,Key_K     ,Key_L     ,ShiftToLayer(QWERTY)
+      ,Key_LeftControl ,Key_N ,Key_M ,Key_Space ,Key_Enter ,Key_LeftAlt
+  ),
+
+  [QWERTY] = KEYMAP_STACKED(
        Key_Q   ,Key_W   ,Key_E       ,Key_R         ,Key_T
       ,Key_A   ,Key_S   ,Key_D       ,Key_F         ,Key_G
       ,Key_Z   ,Key_X   ,Key_C       ,Key_V         ,Key_B
       ,Key_Esc ,Key_Tab ,Key_LeftGui ,Key_LeftShift ,Key_Backspace ,Key_LeftControl
 
-                    ,Key_Y     ,Key_U ,Key_I     ,Key_O      ,Key_P
-                    ,Key_H     ,Key_J ,Key_K     ,Key_L      ,Key_Semicolon
-                    ,Key_N     ,Key_M ,Key_Comma ,Key_Period ,Key_Slash
-       ,Key_LeftAlt ,Key_Space ,MO(1) ,Key_Minus ,Key_Quote  ,Key_Enter
+                   ,Key_Y     ,Key_U       ,Key_I     ,Key_O      ,Key_P
+                   ,Key_H     ,Key_J       ,Key_K     ,Key_L      ,Key_Semicolon
+                   ,Key_N     ,Key_M       ,Key_Comma ,Key_Period ,Key_Slash
+      ,Key_LeftAlt ,Key_Space ,MO(SYMBOLS) ,Key_Minus ,Key_Quote  ,Key_Enter
   ),
 
-  [1] = KEYMAP_STACKED
+  [SYMBOLS] = KEYMAP_STACKED
   (
        Key_Exclamation ,Key_At           ,Key_UpArrow   ,Key_LeftCurlyBracket ,Key_RightCurlyBracket
       ,Key_Hash        ,Key_LeftArrow    ,Key_DownArrow ,Key_RightArrow       ,Key_Dollar
       ,Key_LeftBracket ,Key_RightBracket ,Key_LeftParen ,Key_RightParen       ,Key_And
-      ,TG(2)           ,Key_Insert       ,Key_LeftGui   ,Key_LeftShift        ,Key_Backspace         ,Key_LeftControl
+      ,TG(FN)          ,Key_Insert       ,Key_LeftGui   ,Key_LeftShift        ,Key_Backspace         ,Key_LeftControl
 
                    ,Key_PageUp   ,Key_7 ,Key_8      ,Key_9 ,Key_Star
                    ,Key_PageDown ,Key_4 ,Key_5      ,Key_6 ,Key_Plus
                    ,Key_Backtick ,Key_1 ,Key_2      ,Key_3 ,Key_Backslash
-      ,Key_LeftAlt ,Key_Space    ,MO(1) ,Key_Period ,Key_0 ,Key_Equals
+      ,Key_LeftAlt ,Key_Space    ,___   ,Key_Period ,Key_0 ,Key_Equals
    ),
 
-  [2] = KEYMAP_STACKED
+  [FN] = KEYMAP_STACKED
   (
        Key_Insert ,Key_Home                 ,Key_UpArrow   ,Key_End        ,Key_PageUp
       ,Key_Delete ,Key_LeftArrow            ,Key_DownArrow ,Key_RightArrow ,Key_PageDown
