@@ -20,6 +20,7 @@
 
 #include "Kaleidoscope.h"
 #include "Kaleidoscope-Macros.h"
+#include "Kaleidoscope-OneShot.h"
 #if WITH_CYCLETIMEREPORT
 #include "Kaleidoscope-CycleTimeReport.h"
 #endif
@@ -31,7 +32,8 @@ enum {
 #include "keymap.h"
 
 KALEIDOSCOPE_INIT_PLUGINS(
-    Macros
+    Macros,
+    OneShot
 #if WITH_CYCLETIMEREPORT
     ,CycleTimeReport
 #endif
