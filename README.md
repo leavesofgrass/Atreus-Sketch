@@ -11,7 +11,9 @@ games.
  [fw:model01]: https://git.madhouse-project.org/algernon/Model01-Sketch
  [fw:ergodox]: https://git.madhouse-project.org/algernon/ErgoDox-sketch
 
-[![The Layout][layout:png]][layout:kle]
+![The Layout][layout:png]
+
+([source][layout:kle])
 
  [layout:png]: data/layout.png
  [layout:kle]: http://www.keyboard-layout-editor.com/#/gists/1945257744b53073795b0795e18b1ab1
