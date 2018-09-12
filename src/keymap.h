@@ -33,19 +33,6 @@
 
 /* *INDENT-OFF* */
 KEYMAPS(
-  [GAMING] = KEYMAP_STACKED
-  (
-       Key_1  ,Key_2 ,Key_3 ,Key_4 ,Key_5
-      ,Key_Q  ,Key_W ,Key_E ,Key_R ,Key_T
-      ,Key_A  ,Key_S ,Key_D ,Key_F ,Key_G
-      ,Key_Z  ,Key_X ,Key_C ,Key_V ,Key_B ,Key_LeftShift
-
-                       ,Key_6 ,Key_7 ,Key_8     ,Key_9      ,Key_0
-                       ,Key_Y ,Key_U ,Key_I     ,Key_O      ,Key_P
-                       ,Key_H ,Key_J ,Key_K     ,Key_L      ,LockLayer(ADORE)
-      ,Key_LeftControl ,Key_N ,Key_M ,Key_Space ,OSL(LOWER) ,OSL(RAISE)
-  ),
-
   [ADORE] = KEYMAP_STACKED(
        OSL(LOWER) ,Key_Tab ,Key_LeftGui ,Key_Esc ,Key_Comma
       ,Key_Quote  ,Key_W   ,Key_C       ,Key_H   ,Key_F
@@ -65,15 +52,15 @@ KEYMAPS(
       ,Key_Backslash ,Key_LeftArrow ,Key_DownArrow ,Key_RightArrow ,Key_PageDown
       ,Key_At        ,Key_Star      ,Key_Dollar    ,Key_Caret      ,Key_Backspace ,OSM(LeftShift)
 
-                 ,Key_Period    ,Key_Minus ,OSM(LeftControl) ,OSM(LeftAlt) ,M(M_GAMING)
+                 ,Key_Period    ,Key_Minus ,OSM(LeftControl) ,OSM(LeftAlt) ,M(M_TESO)
                  ,Key_Semicolon ,Key_1     ,Key_2            ,Key_3        ,Key_Equals
                  ,Key_0         ,Key_4     ,Key_5            ,Key_6        ,Key_Plus
       ,Key_Enter ,Key_Space     ,Key_7     ,Key_8            ,Key_9        ,Key_Underscore
-   ),
+  ),
 
   [RAISE] = KEYMAP_STACKED
   (
-       M(M_GAMING)             ,Key_Tab              ,Key_LeftGui           ,Key_Esc       ,Key_Comma
+       M(M_TESO)               ,Key_Tab              ,Key_LeftGui           ,Key_Esc       ,Key_Comma
       ,Consumer_ScanNextTrack  ,Key_LeftBracket      ,Key_RightBracket      ,Key_LeftParen ,Key_RightParen
       ,Consumer_PlaySlashPause ,Key_LeftCurlyBracket ,Key_RightCurlyBracket ,XXX           ,M(M_RESET)
       ,Key_Percent             ,Key_Exclamation      ,Key_Hash              ,Key_And       ,Key_Backspace  ,OSM(LeftShift)
@@ -82,6 +69,33 @@ KEYMAPS(
                  ,Consumer_VolumeIncrement ,Key_F1    ,Key_F2           ,Key_F3       ,Key_F10
                  ,Consumer_VolumeDecrement ,Key_F4    ,Key_F5           ,Key_F6       ,Key_F11
       ,Key_Enter ,Key_Space                ,Key_F7    ,Key_F8           ,Key_F9       ,Key_F12
-   )
+  ),
+
+  [TESO] = KEYMAP_STACKED
+  (
+       Key_1   ,Key_2 ,Key_3       ,Key_4           ,Key_5
+      ,Key_Q   ,Key_W ,Key_E       ,Key_R           ,Key_Esc
+      ,Key_A   ,Key_S ,Key_D       ,Key_F           ,Key_Backtick
+      ,MO(AUX) ,Key_H ,Key_LeftAlt ,Key_LeftControl ,Key_Space ,Key_LeftShift
+
+           ,XXX ,XXX ,XXX ,XXX ,XXX
+           ,XXX ,XXX ,XXX ,XXX ,XXX
+           ,XXX ,XXX ,XXX ,XXX ,XXX
+      ,XXX ,XXX ,XXX ,XXX ,XXX ,XXX
+  ),
+
+  [AUX] = KEYMAP_STACKED
+  (
+       XXX   ,Key_P ,Key_M ,Key_U ,Key_J
+      ,XXX   ,Key_1 ,Key_2 ,Key_3 ,Key_I
+      ,Key_0 ,Key_4 ,Key_5 ,Key_6 ,Key_K
+      ,___   ,Key_7 ,Key_8 ,Key_9 ,Key_Space ,Key_Enter
+
+           ,XXX ,XXX ,XXX ,XXX ,XXX
+           ,XXX ,XXX ,XXX ,XXX ,XXX
+           ,XXX ,XXX ,XXX ,XXX ,XXX
+      ,XXX ,XXX ,XXX ,XXX ,XXX ,XXX
+  ),
+
 )
 /* *INDENT-ON* */
