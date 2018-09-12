@@ -18,4 +18,4 @@
 
 #pragma once
 
-enum { GAMING, DVORAK, LOWER, RAISE };
+enum { GAMING, ADORE, LOWER, RAISE };
