@@ -26,7 +26,8 @@
 #endif
 
 enum {
-  M_RESET
+  M_RESET,
+  M_GAMING,
 };
 
 #include "keymap.h"
@@ -58,6 +59,9 @@ const macro_t *macroAction(uint8_t macroIndex, uint8_t keyState) {
   switch (macroIndex) {
     case M_RESET:
       Atreus.resetDevice();
+      break;
+    case M_GAMING:
+      Layer.move(GAMING);
       break;
   }
 
