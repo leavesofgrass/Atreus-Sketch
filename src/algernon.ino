@@ -28,6 +28,7 @@
 enum {
   M_RESET,
   M_TESO,
+  M_ADORE,
 };
 
 #include "keymap.h"
@@ -62,6 +63,9 @@ const macro_t *macroAction(uint8_t macroIndex, uint8_t keyState) {
       break;
     case M_TESO:
       Layer.move(TESO);
+      break;
+    case M_ADORE:
+      Layer.move(ADORE);
       break;
   }
 
