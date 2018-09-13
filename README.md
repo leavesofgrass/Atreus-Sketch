@@ -11,9 +11,15 @@ games.
  [fw:model01]: https://git.madhouse-project.org/algernon/Model01-Sketch
  [fw:ergodox]: https://git.madhouse-project.org/algernon/ErgoDox-sketch
 
-![The Layout][layout:png]
+## Typing layout
 
-([source][layout:kle])
+When the keyboard boots up, it starts in "typing mode", intended to input text.
+It uses the `ADORE` layout I'm working on.
 
- [layout:png]: data/layout.png
- [layout:kle]: http://www.keyboard-layout-editor.com/#/gists/1945257744b53073795b0795e18b1ab1
+![The Typing Layout][layout:typing:png]
+
+([source][layout:typing:src]) ([KLE][layout:typing:kle])
+
+ [layout:typing:png]: data/typing-layers.png
+ [layout:typing:src]: data/typing-layers.json
+ [layout:typing:kle]: http://www.keyboard-layout-editor.com/#/gists/1945257744b53073795b0795e18b1ab1
