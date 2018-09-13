@@ -31,6 +31,8 @@
 #define Key_Plus LSHIFT(Key_Equals)
 #define Key_Underscore LSHIFT(Key_Minus)
 
+#define MO(n) ShiftToLayer(n)
+
 /* *INDENT-OFF* */
 KEYMAPS(
   [ADORE] = KEYMAP_STACKED(
