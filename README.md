@@ -23,3 +23,13 @@ It uses the `ADORE` layout I'm working on.
  [layout:typing:png]: data/typing-layers.png
  [layout:typing:src]: data/typing-layers.json
  [layout:typing:kle]: http://www.keyboard-layout-editor.com/#/gists/1945257744b53073795b0795e18b1ab1
+
+## The Elder Scrolls Online
+
+![The Elder Scrolls Online Layout][layout:teso:png]
+
+([source][layout:teso:src]) ([KLE][layout:teso:kle])
+
+ [layout:teso:png]: data/teso-layers.png
+ [layout:teso:src]: data/teso-layers.json
+ [layout:teso:kle]: http://www.keyboard-layout-editor.com/#/gists/f907f484c1c4f6bac6946e7e7487e955
