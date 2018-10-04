@@ -30,7 +30,7 @@ enum {
   M_ADORE,
 };
 
-struct {
+static struct {
   uint32_t average_loop_time;
 } state;
 
