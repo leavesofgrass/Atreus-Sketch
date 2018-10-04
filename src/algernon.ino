@@ -53,6 +53,30 @@ bool focusCycleTime(const char *command) {
   return true;
 }
 
+bool focusLayout(const char *command) {
+  char layout;
+
+  if (strcmp_P(command, PSTR("layout")) != 0)
+    return false;
+
+  if (Serial.peek() == '\n')
+    goto report;
+
+  layout = (char)Serial.read();
+
+  if (layout == 'a') {
+    Layer.off(DVORAK);
+    Layer.on(ADORE);
+  } else if (layout == 'd') {
+    Layer.off(ADORE);
+    Layer.on(DVORAK);
+  }
+
+report:
+    Serial.println(Layer.isOn(ADORE) ? "a" : "d");
+    return true;
+}
+
 void cycleTimeReport(void) {
   state.average_loop_time = CycleTimeReport.average_loop_time;
 }
@@ -88,6 +112,7 @@ void setup() {
   Focus.addHook(FOCUS_HOOK_HELP);
   Focus.addHook(FOCUS_HOOK_VERSION);
   Focus.addHook(FOCUS_HOOK(focusCycleTime, "cycletime"));
+  Focus.addHook(FOCUS_HOOK(focusLayout, "layout"));
 }
 
 void loop() {

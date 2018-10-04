@@ -18,4 +18,4 @@
 
 #pragma once
 
-enum { ADORE, LOWER, RAISE, TESO, AUX };
+enum { ADORE, DVORAK, LOWER, RAISE, TESO, AUX };
