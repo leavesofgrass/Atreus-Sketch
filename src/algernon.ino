@@ -20,6 +20,7 @@
 
 #include "Kaleidoscope.h"
 #include "Kaleidoscope-CycleTimeReport.h"
+#include "Kaleidoscope-Focus.h"
 #include "Kaleidoscope-Macros.h"
 #include "Kaleidoscope-OneShot.h"
 
@@ -29,9 +30,14 @@ enum {
   M_ADORE,
 };
 
+struct {
+  uint32_t average_loop_time;
+} state;
+
 #include "keymap.h"
 
 KALEIDOSCOPE_INIT_PLUGINS(
+    Focus,
     Macros,
     OneShot,
     CycleTimeReport
@@ -39,9 +45,16 @@ KALEIDOSCOPE_INIT_PLUGINS(
 
 /* CycleTimeReport */
 
+bool focusCycleTime(const char *command) {
+  if (strcmp_P(command, PSTR("cycletime")) != 0)
+    return false;
+
+  Serial.println(state.average_loop_time);
+  return true;
+}
+
 void cycleTimeReport(void) {
-  Serial.print(F("# average loop time: "));
-  Serial.println(CycleTimeReport.average_loop_time);
+  state.average_loop_time = CycleTimeReport.average_loop_time;
 }
 
 /** Macros **/
@@ -69,7 +82,12 @@ const macro_t *macroAction(uint8_t macroIndex, uint8_t keyState) {
 
 void setup() {
   Serial.begin(9600);
+
   Kaleidoscope.setup();
+
+  Focus.addHook(FOCUS_HOOK_HELP);
+  Focus.addHook(FOCUS_HOOK_VERSION);
+  Focus.addHook(FOCUS_HOOK(focusCycleTime, "cycletime"));
 }
 
 void loop() {
