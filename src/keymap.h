@@ -31,46 +31,53 @@
 #define Key_Plus LSHIFT(Key_Equals)
 #define Key_Underscore LSHIFT(Key_Minus)
 
+#define Key_MNext Consumer_ScanNextTrack
+#define Key_MPlay Consumer_PlaySlashPause
+#define Key_LeftCurly Key_LeftCurlyBracket
+#define Key_RightCurly Key_RightCurlyBracket
+#define Key_VolInc Consumer_VolumeIncrement
+#define Key_VolDec Consumer_VolumeDecrement
+
 #define MO(n) ShiftToLayer(n)
 
 /* *INDENT-OFF* */
 KEYMAPS(
   [ADORE] = KEYMAP_STACKED(
-       OSL(LOWER) ,Key_Tab ,Key_LeftGui ,Key_Esc ,Key_Comma
-      ,Key_Quote  ,Key_W   ,Key_C       ,Key_H   ,Key_F
-      ,Key_A      ,Key_O   ,Key_E       ,Key_I   ,Key_U
-      ,Key_Z      ,Key_Q   ,Key_X       ,Key_B   ,Key_Backspace ,OSM(LeftShift)
+       Key_Quote  ,Key_W       ,Key_C   ,Key_H   ,Key_F
+      ,Key_A      ,Key_O       ,Key_E   ,Key_I   ,Key_U
+      ,Key_Z      ,Key_Q       ,Key_X   ,Key_B   ,Key_Comma
+      ,OSL(LOWER) ,Key_LeftGui ,Key_Esc ,Key_Tab ,Key_Backspace ,OSM(LeftShift)
 
-                 ,Key_Period ,Key_Minus ,OSM(LeftControl) ,OSM(LeftAlt) ,OSL(RAISE)
                  ,Key_M      ,Key_G     ,Key_L            ,Key_P        ,Key_Slash
                  ,Key_D      ,Key_R     ,Key_T            ,Key_N        ,Key_S
-     ,Key_Enter  ,Key_Space  ,Key_K     ,Key_V            ,Key_Y        ,Key_J
+                 ,Key_Period ,Key_K     ,Key_V            ,Key_Y        ,Key_J
+      ,Key_Enter ,Key_Space  ,Key_Minus ,OSM(LeftControl) ,OSM(LeftAlt) ,OSL(RAISE)
   ),
 
   [LOWER] = KEYMAP_STACKED
   (
-       OSL(LOWER)    ,Key_Tab       ,Key_LeftGui   ,Key_Esc        ,Key_Comma
-      ,Key_Backtick  ,Key_Home      ,Key_UpArrow   ,Key_End        ,Key_PageUp
+       Key_Backtick  ,Key_Home      ,Key_UpArrow   ,Key_End        ,Key_PageUp
       ,Key_Backslash ,Key_LeftArrow ,Key_DownArrow ,Key_RightArrow ,Key_PageDown
-      ,Key_At        ,Key_Star      ,Key_Dollar    ,Key_Caret      ,Key_Backspace ,OSM(LeftShift)
+      ,Key_At        ,Key_Star      ,Key_Dollar    ,Key_Caret      ,Key_Comma
+      ,OSL(LOWER)    ,Key_LeftGui   ,Key_Esc       ,Key_Tab        ,Key_Backspace ,OSM(LeftShift)
 
-                 ,Key_Period    ,Key_Minus ,OSM(LeftControl) ,OSM(LeftAlt) ,M(M_TESO)
                  ,Key_Semicolon ,Key_1     ,Key_2            ,Key_3        ,Key_Equals
                  ,Key_0         ,Key_4     ,Key_5            ,Key_6        ,Key_Plus
-      ,Key_Enter ,Key_Space     ,Key_7     ,Key_8            ,Key_9        ,Key_Underscore
+                 ,Key_Period    ,Key_7     ,Key_8            ,Key_9        ,Key_Underscore
+      ,Key_Enter ,Key_Space     ,Key_Minus ,OSM(LeftControl) ,OSM(LeftAlt) ,M(M_TESO)
   ),
 
   [RAISE] = KEYMAP_STACKED
   (
-       M(M_TESO)               ,Key_Tab              ,Key_LeftGui           ,Key_Esc       ,Key_Comma
-      ,Consumer_ScanNextTrack  ,Key_LeftBracket      ,Key_RightBracket      ,Key_LeftParen ,Key_RightParen
-      ,Consumer_PlaySlashPause ,Key_LeftCurlyBracket ,Key_RightCurlyBracket ,XXX           ,M(M_RESET)
-      ,Key_Percent             ,Key_Exclamation      ,Key_Hash              ,Key_And       ,Key_Backspace  ,OSM(LeftShift)
+       Key_MNext   ,Key_LeftBracket ,Key_RightBracket ,Key_LeftParen ,Key_RightParen
+      ,Key_MPlay   ,Key_LeftCurly   ,Key_RightCurly   ,XXX           ,XXX
+      ,Key_Percent ,Key_Exclamation ,Key_Hash         ,Key_And       ,M(M_RESET)
+      ,M(M_TESO)   ,Key_LeftGui     ,Key_Esc          ,Key_Tab       ,Key_Backspace  ,OSM(LeftShift)
 
-                 ,Key_Period               ,Key_Minus ,OSM(LeftControl) ,OSM(LeftAlt) ,OSL(RAISE)
-                 ,Consumer_VolumeIncrement ,Key_F1    ,Key_F2           ,Key_F3       ,Key_F10
-                 ,Consumer_VolumeDecrement ,Key_F4    ,Key_F5           ,Key_F6       ,Key_F11
-      ,Key_Enter ,Key_Space                ,Key_F7    ,Key_F8           ,Key_F9       ,Key_F12
+                 ,Key_VolInc ,Key_F1    ,Key_F2           ,Key_F3       ,Key_F10
+                 ,Key_VolDec ,Key_F4    ,Key_F5           ,Key_F6       ,Key_F11
+                 ,Key_Period ,Key_F7    ,Key_F8           ,Key_F9       ,Key_F12
+      ,Key_Enter ,Key_Space  ,Key_Minus ,OSM(LeftControl) ,OSM(LeftAlt) ,OSL(RAISE)
   ),
 
   [TESO] = KEYMAP_STACKED
@@ -98,6 +105,5 @@ KEYMAPS(
            ,XXX ,XXX ,XXX ,XXX ,XXX
       ,XXX ,XXX ,XXX ,XXX ,XXX ,XXX
   ),
-
 )
 /* *INDENT-ON* */
