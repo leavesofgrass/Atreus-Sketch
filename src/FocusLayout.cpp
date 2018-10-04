@@ -17,16 +17,39 @@
  */
 
 #include "Kaleidoscope-Focus.h"
+#include "Kaleidoscope-EEPROM-Settings.h"
 
 #include "FocusLayout.h"
 #include "layers.h"
 
 namespace kaleidoscope {
 
+uint16_t FocusLayout::settings_base_;
+
 EventHandlerResult FocusLayout::onSetup() {
   ::Focus.addHook(FOCUS_HOOK(onFocusEvent, "layout"));
+  ::EEPROMSettings.onSetup();
+
+  settings_base_ = ::EEPROMSettings.requestSlice(1);
+  char layout = (char)EEPROM.read(settings_base_);
+
+  selectLayout(layout);
 
   return EventHandlerResult::OK;
+}
+
+void FocusLayout::selectLayout(const char layout) {
+  if (layout == 'a') {
+    Layer.off(DVORAK);
+    Layer.on(ADORE);
+  } else if (layout == 'd') {
+    Layer.off(ADORE);
+    Layer.on(DVORAK);
+  } else {
+    return;
+  }
+
+  EEPROM.update(settings_base_, layout);
 }
 
 bool FocusLayout::onFocusEvent(const char *command) {
@@ -40,13 +63,7 @@ bool FocusLayout::onFocusEvent(const char *command) {
 
   layout = (char)Serial.read();
 
-  if (layout == 'a') {
-    Layer.off(DVORAK);
-    Layer.on(ADORE);
-  } else if (layout == 'd') {
-    Layer.off(ADORE);
-    Layer.on(DVORAK);
-  }
+  selectLayout(layout);
 
 report:
     Serial.println(Layer.isOn(ADORE) ? "a" : "d");
