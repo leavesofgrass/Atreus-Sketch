@@ -21,9 +21,7 @@
 #include "Kaleidoscope.h"
 #include "Kaleidoscope-Macros.h"
 #include "Kaleidoscope-OneShot.h"
-#if WITH_CYCLETIMEREPORT
 #include "Kaleidoscope-CycleTimeReport.h"
-#endif
 
 enum {
   M_RESET,
@@ -35,21 +33,16 @@ enum {
 
 KALEIDOSCOPE_INIT_PLUGINS(
     Macros,
-    OneShot
-#if WITH_CYCLETIMEREPORT
-    ,CycleTimeReport
-#endif
+    OneShot,
+    CycleTimeReport
 );
 
-
-#if WITH_CYCLETIMEREPORT
 /* CycleTimeReport */
 
 void cycleTimeReport(void) {
   Serial.print(F("# average loop time: "));
   Serial.println(CycleTimeReport.average_loop_time);
 }
-#endif
 
 /** Macros **/
 

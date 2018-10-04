@@ -17,5 +17,3 @@
  */
 
 #pragma once
-
-#define WITH_CYCLETIMEREPORT 1
