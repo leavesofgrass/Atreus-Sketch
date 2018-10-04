@@ -100,7 +100,7 @@ KEYMAPS(
       ,Key_A   ,Key_S ,Key_D       ,Key_F           ,Key_Backtick
       ,MO(AUX) ,Key_H ,Key_LeftAlt ,Key_LeftControl ,Key_Space ,Key_LeftShift
 
-           ,XXX ,XXX ,XXX ,XXX ,M(M_ADORE)
+           ,XXX ,XXX ,XXX ,XXX ,M(M_TYPING)
            ,XXX ,XXX ,XXX ,XXX ,XXX
            ,XXX ,XXX ,XXX ,XXX ,XXX
       ,XXX ,XXX ,XXX ,XXX ,XXX ,XXX
@@ -113,7 +113,7 @@ KEYMAPS(
       ,Key_0 ,Key_4 ,Key_5 ,Key_6 ,Key_K
       ,___   ,Key_7 ,Key_8 ,Key_9 ,Key_Space ,Key_Enter
 
-           ,XXX ,XXX ,XXX ,XXX ,M(M_ADORE)
+           ,XXX ,XXX ,XXX ,XXX ,M(M_TYPING)
            ,XXX ,XXX ,XXX ,XXX ,XXX
            ,XXX ,XXX ,XXX ,XXX ,XXX
       ,XXX ,XXX ,XXX ,XXX ,XXX ,XXX

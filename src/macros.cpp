@@ -32,10 +32,10 @@ const macro_t *macroAction(uint8_t macroIndex, uint8_t keyState) {
       Atreus.resetDevice();
       break;
     case M_TESO:
-      Layer.move(TESO);
+      Layer.on(TESO);
       break;
-    case M_ADORE:
-      Layer.move(ADORE);
+    case M_TYPING:
+      Layer.off(TESO);
       break;
   }
 

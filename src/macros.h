@@ -21,5 +21,5 @@
 enum {
   M_RESET,
   M_TESO,
-  M_ADORE,
+  M_TYPING,
 };
