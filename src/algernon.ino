@@ -19,9 +19,9 @@
 #include "00-config.h"
 
 #include "Kaleidoscope.h"
+#include "Kaleidoscope-CycleTimeReport.h"
 #include "Kaleidoscope-Macros.h"
 #include "Kaleidoscope-OneShot.h"
-#include "Kaleidoscope-CycleTimeReport.h"
 
 enum {
   M_RESET,
