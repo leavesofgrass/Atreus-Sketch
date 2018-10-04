@@ -24,6 +24,8 @@
 #include "Kaleidoscope-Macros.h"
 #include "Kaleidoscope-OneShot.h"
 
+#include "FocusLayout.h"
+
 enum {
   M_RESET,
   M_TESO,
@@ -38,6 +40,7 @@ static struct {
 
 KALEIDOSCOPE_INIT_PLUGINS(
     Focus,
+    FocusLayout,
     Macros,
     OneShot,
     CycleTimeReport
@@ -51,30 +54,6 @@ bool focusCycleTime(const char *command) {
 
   Serial.println(state.average_loop_time);
   return true;
-}
-
-bool focusLayout(const char *command) {
-  char layout;
-
-  if (strcmp_P(command, PSTR("layout")) != 0)
-    return false;
-
-  if (Serial.peek() == '\n')
-    goto report;
-
-  layout = (char)Serial.read();
-
-  if (layout == 'a') {
-    Layer.off(DVORAK);
-    Layer.on(ADORE);
-  } else if (layout == 'd') {
-    Layer.off(ADORE);
-    Layer.on(DVORAK);
-  }
-
-report:
-    Serial.println(Layer.isOn(ADORE) ? "a" : "d");
-    return true;
 }
 
 void cycleTimeReport(void) {
@@ -112,7 +91,6 @@ void setup() {
   Focus.addHook(FOCUS_HOOK_HELP);
   Focus.addHook(FOCUS_HOOK_VERSION);
   Focus.addHook(FOCUS_HOOK(focusCycleTime, "cycletime"));
-  Focus.addHook(FOCUS_HOOK(focusLayout, "layout"));
 }
 
 void loop() {
