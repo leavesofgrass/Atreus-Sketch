@@ -19,6 +19,7 @@
 #pragma once
 
 #include "layers.h"
+#include "macros.h"
 
 #define Key_Exclamation LSHIFT(Key_1)
 #define Key_At LSHIFT(Key_2)

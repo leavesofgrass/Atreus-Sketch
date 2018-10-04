@@ -16,37 +16,10 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-#include "00-config.h"
+#pragma once
 
-#include "Kaleidoscope.h"
-#include "Kaleidoscope-CycleTimeReport.h"
-#include "Kaleidoscope-Focus.h"
-#include "Kaleidoscope-Macros.h"
-#include "Kaleidoscope-OneShot.h"
-
-#include "FocusCycleTime.h"
-#include "FocusLayout.h"
-
-#include "keymap.h"
-
-KALEIDOSCOPE_INIT_PLUGINS(
-    CycleTimeReport,
-    Focus,
-    FocusLayout,
-    FocusCycleTime,
-    Macros,
-    OneShot
-);
-
-void setup() {
-  Serial.begin(9600);
-
-  Kaleidoscope.setup();
-
-  Focus.addHook(FOCUS_HOOK_HELP);
-  Focus.addHook(FOCUS_HOOK_VERSION);
-}
-
-void loop() {
-  Kaleidoscope.loop();
-}
+enum {
+  M_RESET,
+  M_TESO,
+  M_ADORE,
+};

@@ -16,37 +16,28 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-#include "00-config.h"
 
 #include "Kaleidoscope.h"
-#include "Kaleidoscope-CycleTimeReport.h"
-#include "Kaleidoscope-Focus.h"
 #include "Kaleidoscope-Macros.h"
-#include "Kaleidoscope-OneShot.h"
 
-#include "FocusCycleTime.h"
-#include "FocusLayout.h"
+#include "layers.h"
+#include "macros.h"
 
-#include "keymap.h"
+const macro_t *macroAction(uint8_t macroIndex, uint8_t keyState) {
+  if (!keyToggledOn(keyState))
+    return MACRO_NONE;
 
-KALEIDOSCOPE_INIT_PLUGINS(
-    CycleTimeReport,
-    Focus,
-    FocusLayout,
-    FocusCycleTime,
-    Macros,
-    OneShot
-);
+  switch (macroIndex) {
+    case M_RESET:
+      Atreus.resetDevice();
+      break;
+    case M_TESO:
+      Layer.move(TESO);
+      break;
+    case M_ADORE:
+      Layer.move(ADORE);
+      break;
+  }
 
-void setup() {
-  Serial.begin(9600);
-
-  Kaleidoscope.setup();
-
-  Focus.addHook(FOCUS_HOOK_HELP);
-  Focus.addHook(FOCUS_HOOK_VERSION);
-}
-
-void loop() {
-  Kaleidoscope.loop();
+  return MACRO_NONE;
 }
