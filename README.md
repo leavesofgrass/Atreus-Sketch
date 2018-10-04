@@ -20,7 +20,7 @@ When the keyboard boots up, it starts in "typing mode", intended to input text. 
  [layout:typing:src]: data/typing-layers.json
  [layout:typing:kle]: http://www.keyboard-layout-editor.com/#/gists/1945257744b53073795b0795e18b1ab1
 
- ## Dvorak
+## Dvorak
 
 For times when I want to type faster than I type on `ADORE`, but can't use my main keyboard (like when silence is paramount, lest I wake the twins), having access to a `Dvorak` layer is useful.
 
