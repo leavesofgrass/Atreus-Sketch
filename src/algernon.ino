@@ -38,13 +38,32 @@ KALEIDOSCOPE_INIT_PLUGINS(
     OneShot
 );
 
+bool focusVersion(const char *command) {
+  if (strcmp_P(command, PSTR("version")) != 0)
+    return false;
+
+  Serial.print(F("Kaleidoscope/master"));
+  Focus.printSpace();
+  Serial.print(F("algernon/Atreus-sketch"));
+#ifdef GIT_REV
+  Serial.print(F("#" GIT_REV));
+#endif
+  Focus.printSeparator();
+  Serial.print(F("https://git.madhouse-project.org/algernon/Atreus-Sketch"));
+#ifdef GIT_FULLREV
+  Serial.println(F("/src/commit/" GIT_FULLREV));
+#endif
+
+  return true;
+}
+
 void setup() {
   Serial.begin(9600);
 
   Kaleidoscope.setup();
 
   Focus.addHook(FOCUS_HOOK_HELP);
-  Focus.addHook(FOCUS_HOOK_VERSION);
+  Focus.addHook(FOCUS_HOOK(focusVersion, "version"));
 }
 
 void loop() {
