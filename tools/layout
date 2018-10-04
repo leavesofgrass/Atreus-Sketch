@@ -1,0 +1,15 @@
+#! /bin/sh
+set -e
+
+stty -F /dev/atreus 9600 raw -echo
+
+params="$1"
+
+if [ ! -z "${params}" ]; then
+    params=" ${params}"
+fi
+
+exec 3</dev/atreus
+echo "layout${params}" >/dev/atreus
+read layout <&3
+echo "${layout}"
