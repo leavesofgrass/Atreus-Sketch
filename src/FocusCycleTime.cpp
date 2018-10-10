@@ -19,24 +19,23 @@
 #include "FocusCycleTime.h"
 
 #include "Kaleidoscope-CycleTimeReport.h"
-#include "Kaleidoscope-Focus.h"
+#include "Kaleidoscope-FocusSerial.h"
 
 namespace kaleidoscope {
 
 uint32_t FocusCycleTime::average_loop_time;
 
-EventHandlerResult FocusCycleTime::onSetup() {
-  ::Focus.addHook(FOCUS_HOOK(onFocusEvent, "cycletime"));
+EventHandlerResult FocusCycleTime::onFocusEvent(const char *command) {
+  const char *cmd = PSTR("cycletime");
 
-  return EventHandlerResult::OK;
-}
+  if (::Focus.handleHelp(command, cmd))
+    return EventHandlerResult::OK;
 
-bool FocusCycleTime::onFocusEvent(const char *command) {
-  if (strcmp_P(command, PSTR("cycletime")) != 0)
-    return false;
+  if (strcmp_P(command, cmd) != 0)
+    return EventHandlerResult::OK;
 
   Serial.println(average_loop_time);
-  return true;
+  return EventHandlerResult::EVENT_CONSUMED;
 }
 
 }

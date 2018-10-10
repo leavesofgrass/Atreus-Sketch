@@ -27,8 +27,7 @@ class FocusLayout : public Plugin {
   FocusLayout() {}
 
   EventHandlerResult onSetup();
-
-  static bool onFocusEvent(const char *command);
+  EventHandlerResult onFocusEvent(const char *command);
 
  private:
   static uint16_t settings_base_;

@@ -26,9 +26,7 @@ class FocusCycleTime : public Plugin {
  public:
   FocusCycleTime() {}
 
-  EventHandlerResult onSetup();
-
-  static bool onFocusEvent(const char *command);
+  EventHandlerResult onFocusEvent(const char *command);
 
   static uint32_t average_loop_time;
 };

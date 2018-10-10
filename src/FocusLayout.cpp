@@ -16,7 +16,7 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-#include "Kaleidoscope-Focus.h"
+#include "Kaleidoscope-FocusSerial.h"
 #include "Kaleidoscope-EEPROM-Settings.h"
 
 #include "FocusLayout.h"
@@ -27,7 +27,6 @@ namespace kaleidoscope {
 uint16_t FocusLayout::settings_base_;
 
 EventHandlerResult FocusLayout::onSetup() {
-  ::Focus.addHook(FOCUS_HOOK(onFocusEvent, "layout"));
   ::EEPROMSettings.onSetup();
 
   settings_base_ = ::EEPROMSettings.requestSlice(1);
@@ -52,11 +51,15 @@ void FocusLayout::selectLayout(const char layout) {
   EEPROM.update(settings_base_, layout);
 }
 
-bool FocusLayout::onFocusEvent(const char *command) {
+EventHandlerResult FocusLayout::onFocusEvent(const char *command) {
   char layout;
+  const char *cmd = PSTR("layout");
 
-  if (strcmp_P(command, PSTR("layout")) != 0)
-    return false;
+  if (::Focus.handleHelp(command, cmd))
+    return EventHandlerResult::OK;
+
+  if (strcmp_P(command, cmd) != 0)
+    return EventHandlerResult::OK;
 
   if (Serial.peek() == '\n')
     goto report;
@@ -66,8 +69,8 @@ bool FocusLayout::onFocusEvent(const char *command) {
   selectLayout(layout);
 
 report:
-    Serial.println(Layer.isOn(ADORE) ? "a" : "d");
-    return true;
+  Serial.println(Layer.isOn(ADORE) ? "a" : "d");
+  return EventHandlerResult::EVENT_CONSUMED;
 }
 }
 

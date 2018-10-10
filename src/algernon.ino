@@ -20,7 +20,8 @@
 
 #include "Kaleidoscope.h"
 #include "Kaleidoscope-CycleTimeReport.h"
-#include "Kaleidoscope-Focus.h"
+#include "Kaleidoscope-FocusSerial.h"
+#include "Kaleidoscope-Focus-Version.h"
 #include "Kaleidoscope-Macros.h"
 #include "Kaleidoscope-OneShot.h"
 
@@ -29,41 +30,23 @@
 
 #include "keymap.h"
 
+MAKE_FOCUS_VERSION_COMMAND("algernon/Atreus-Sketch",
+                           "https://git.madhouse-project.org/",
+                           GIT_REV,
+                           "/src/commit/" GIT_FULLREV);
+
 KALEIDOSCOPE_INIT_PLUGINS(
     CycleTimeReport,
     Focus,
+    FocusVersionCommand,
     FocusLayout,
     FocusCycleTime,
     Macros,
     OneShot
 );
 
-bool focusVersion(const char *command) {
-  if (strcmp_P(command, PSTR("version")) != 0)
-    return false;
-
-  Serial.print(F("Kaleidoscope/master"));
-  Focus.printSpace();
-  Serial.print(F("algernon/Atreus-sketch"));
-#ifdef GIT_REV
-  Serial.print(F("#" GIT_REV));
-#endif
-  Focus.printSeparator();
-  Serial.print(F("https://git.madhouse-project.org/algernon/Atreus-Sketch"));
-#ifdef GIT_FULLREV
-  Serial.println(F("/src/commit/" GIT_FULLREV));
-#endif
-
-  return true;
-}
-
 void setup() {
-  Serial.begin(9600);
-
   Kaleidoscope.setup();
-
-  Focus.addHook(FOCUS_HOOK_HELP);
-  Focus.addHook(FOCUS_HOOK(focusVersion, "version"));
 }
 
 void loop() {
