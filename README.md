@@ -1,6 +1,8 @@
 algernon's Atreus firmware
 ==============================
 
+[![CI status](https://ci.madhouse-project.org/api/badges/algernon/Atreus-Sketch/status.svg?branch=master)](https://ci.madhouse-project.org/algernon/Atreus-Sketch)
+
 This is my work in progress firmware Sketch for the [Atreus][atreus], using [Kaleidoscope][ks]. Unlike my [Model01][fw:model01] or [ErgoDox][fw:ergodox] sketches, this one is not intended for daily use, but for playing selected games.
 
  [ks]: https://github.com/keyboardio/Kaleidoscope
