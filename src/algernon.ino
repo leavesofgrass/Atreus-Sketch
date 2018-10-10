@@ -36,13 +36,13 @@ MAKE_FOCUS_VERSION_COMMAND("algernon/Atreus-Sketch",
                            "/src/commit/" GIT_FULLREV);
 
 KALEIDOSCOPE_INIT_PLUGINS(
-    CycleTimeReport,
-    Focus,
-    FocusVersionCommand,
-    FocusLayout,
-    FocusCycleTime,
-    Macros,
-    OneShot
+  CycleTimeReport,
+  Focus,
+  FocusVersionCommand,
+  FocusLayout,
+  FocusCycleTime,
+  Macros,
+  OneShot
 );
 
 void setup() {

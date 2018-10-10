@@ -28,15 +28,15 @@ const macro_t *macroAction(uint8_t macroIndex, uint8_t keyState) {
     return MACRO_NONE;
 
   switch (macroIndex) {
-    case M_RESET:
-      Atreus.resetDevice();
-      break;
-    case M_TESO:
-      Layer.on(TESO);
-      break;
-    case M_TYPING:
-      Layer.off(TESO);
-      break;
+  case M_RESET:
+    Atreus.resetDevice();
+    break;
+  case M_TESO:
+    Layer.on(TESO);
+    break;
+  case M_TYPING:
+    Layer.off(TESO);
+    break;
   }
 
   return MACRO_NONE;
