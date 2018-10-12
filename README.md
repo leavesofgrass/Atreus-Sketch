@@ -15,6 +15,7 @@ This is my work in progress firmware Sketch for the [Atreus][atreus], using [Kal
 * [Typing layouts](#typing-layouts)
   - [ADORE](#adore)
   - [Dvorak](#dvorak)
+  - [Raise & Lower](#raise-lower)
 * [Games](#games)
   - [The Elder Scrolls Online](#the-elder-scrolls-online)
 * [Plugins used](#plugins-used)
@@ -26,13 +27,13 @@ This is my work in progress firmware Sketch for the [Atreus][atreus], using [Kal
 
 When the keyboard boots up, it starts in "typing mode", intended to input text. It uses the `ADORE` layout I'm working on.
 
-![The Typing Layout][layout:typing:png]
+![ADORE][layout:adore:png]
 
-([source][layout:typing:src]) ([KLE][layout:typing:kle])
+([source][layout:adore:src]) ([KLE][layout:adore:kle])
 
- [layout:typing:png]: data/typing-layers.png
- [layout:typing:src]: data/typing-layers.json
- [layout:typing:kle]: http://www.keyboard-layout-editor.com/#/gists/1945257744b53073795b0795e18b1ab1
+ [layout:adore:png]: data/adore-layer.png
+ [layout:adore:src]: data/adore-layer.json
+ [layout:adore:kle]: http://www.keyboard-layout-editor.com/#/gists/1945257744b53073795b0795e18b1ab1
 
 ### Dvorak
 
@@ -45,6 +46,18 @@ For times when I want to type faster than I type on `ADORE`, but can't use my ma
  [layout:dvorak:png]: data/dvorak-layer.png
  [layout:dvorak:src]: data/dvorak-layer.json
  [layout:dvorak:kle]: http://www.keyboard-layout-editor.com/#/gists/b7f98ff835c0c76d39d6740f18f5477f
+
+ ### Raise & Lower
+
+ The `Raise` and `Lower` layers are common between `ADORE` and `Dvorak`.
+
+ ![Raise & Lower layers][layout:raise-lower:png]
+
+ ([source][layout:raise-lower:src])([KLE][layout:raise-lower:kle])
+
+ [layout:raise-lower:png]: data/raise-lower-layers.png
+ [layout:raise-lower:src]: data/raise-lower-layers.json
+ [layout:raise-lower:kle]: http://www.keyboard-layout-editor.com/#/gists/dd63761e66cc8d22985b368ebadfe4f5
 
 ## Games
 
