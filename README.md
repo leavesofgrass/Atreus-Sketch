@@ -17,6 +17,8 @@ This is my work in progress firmware Sketch for the [Atreus][atreus], using [Kal
   - [Dvorak](#dvorak)
 * [Games](#games)
   - [The Elder Scrolls Online](#the-elder-scrolls-online)
+* [Plugins used](#plugins-used)
+* [License](#license)
 
 ## Typing layouts
 
@@ -55,3 +57,27 @@ For times when I want to type faster than I type on `ADORE`, but can't use my ma
  [layout:teso:png]: data/teso-layers.png
  [layout:teso:src]: data/teso-layers.json
  [layout:teso:kle]: http://www.keyboard-layout-editor.com/#/gists/f907f484c1c4f6bac6946e7e7487e955
+
+## Plugins used
+
+This sketch uses a moderate amount of plugins only, listed below.
+
+* [CycleTimeReport][kaleidoscope:cycletimereport]
+* [FocusSerial][kaleidoscope:focusserial]
+* [Focus-Version][kaleidoscope:focus-version]
+* [Hardware-Technomancy-Atreus][kaleidoscope:hardware-technomancy-atreus]
+* [Macros][kaleidoscope:macros]
+* [OneShot][kaleidoscope:oneshot]
+
+  [kaleidoscope:focus-version]: https://git.madhouse-project.org/algernon/Kaleidoscope-Focus-Version
+  [kaleidoscope:hardware-technomancy-atreus]: https://github.com/keyboardio/Kaleidoscope-Hardware-Technomancy-Atreus
+  [kaleidoscope:oneshot]: https://github.com/keyboardio/Kaleidoscope-OneShot
+  [kaleidoscope:macros]: https://github.com/keyboardio/Kaleidoscope-Macros
+  [kaleidoscope:focusserial]: https://github.com/keyboardio/Kaleidoscope-FocusSerial
+  [chrysalis]: https://github.com/algernon/Chrysalis
+  [kaleidoscope:cycletimereport]: https://github.com/keyboardio/Kaleidoscope-CycleTimeReport
+
+# License
+
+The code is released under the terms of the GNU GPL, version 3 or later. See the
+COPYING file for details.
