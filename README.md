@@ -53,7 +53,7 @@ The `Raise` and `Lower` layers are common between `ADORE` and `Dvorak`.
 
 ![Raise & Lower layers][layout:raise-lower:png]
 
- ([source][layout:raise-lower:src])([KLE][layout:raise-lower:kle])
+ ([source][layout:raise-lower:src]) ([KLE][layout:raise-lower:kle])
 
  [layout:raise-lower:png]: data/raise-lower-layers.png
  [layout:raise-lower:src]: data/raise-lower-layers.json
