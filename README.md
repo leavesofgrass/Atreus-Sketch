@@ -63,6 +63,7 @@ For times when I want to type faster than I type on `ADORE`, but can't use my ma
 This sketch uses a moderate amount of plugins only, listed below.
 
 * [CycleTimeReport][kaleidoscope:cycletimereport]
+* [Escape-OneShot][kaleidoscope:escape-oneshot]
 * [FocusSerial][kaleidoscope:focusserial]
 * [Focus-Version][kaleidoscope:focus-version]
 * [Hardware-Technomancy-Atreus][kaleidoscope:hardware-technomancy-atreus]
@@ -76,6 +77,7 @@ This sketch uses a moderate amount of plugins only, listed below.
   [kaleidoscope:focusserial]: https://github.com/keyboardio/Kaleidoscope-FocusSerial
   [chrysalis]: https://github.com/algernon/Chrysalis
   [kaleidoscope:cycletimereport]: https://github.com/keyboardio/Kaleidoscope-CycleTimeReport
+  [kaleidoscope:escape-oneshot]: https://github.com/keyboardio/Kaleidoscope-Escape-OneShot
 
 # License
 

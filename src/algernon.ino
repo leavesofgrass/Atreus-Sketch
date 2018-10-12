@@ -20,6 +20,7 @@
 
 #include "Kaleidoscope.h"
 #include "Kaleidoscope-CycleTimeReport.h"
+#include "Kaleidoscope-Escape-OneShot.h"
 #include "Kaleidoscope-FocusSerial.h"
 #include "Kaleidoscope-Focus-Version.h"
 #include "Kaleidoscope-Macros.h"
@@ -42,6 +43,7 @@ KALEIDOSCOPE_INIT_PLUGINS(
   FocusLayout,
   FocusCycleTime,
   Macros,
+  EscapeOneShot,
   OneShot
 );
 
