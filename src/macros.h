@@ -20,6 +20,5 @@
 
 enum {
   M_RESET,
-  M_TESO,
   M_TYPING,
 };

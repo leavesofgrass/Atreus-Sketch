@@ -40,6 +40,7 @@
 #define Key_VolDec Consumer_VolumeDecrement
 
 #define MO(n) ShiftToLayer(n)
+#define TG(n) LockLayer(n)
 
 /* *INDENT-OFF* */
 
@@ -112,7 +113,7 @@ KEYMAPS(
   [_GAMES] = KEYMAP_STACKED
   (
        XXX ,XXX ,XXX       ,XXX ,XXX
-      ,XXX ,XXX ,M(M_TESO) ,XXX ,XXX
+      ,XXX ,XXX ,TG(_TESO) ,XXX ,XXX
       ,XXX ,XXX ,XXX       ,XXX ,XXX
       ,XXX ,XXX ,XXX       ,XXX ,XXX ,XXX
 
