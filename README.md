@@ -41,17 +41,17 @@ For times when I want to type faster than I type on `ADORE`, but can't use my ma
 
 ![Dvorak layer][layout:dvorak:png]
 
-([source][layout:typing:src]) ([KLE][layout:typing:kle])
+([source][layout:dvorak:src]) ([KLE][layout:dvorak:kle])
 
  [layout:dvorak:png]: data/dvorak-layer.png
  [layout:dvorak:src]: data/dvorak-layer.json
  [layout:dvorak:kle]: http://www.keyboard-layout-editor.com/#/gists/b7f98ff835c0c76d39d6740f18f5477f
 
- ### Raise & Lower
+### Raise & Lower
 
- The `Raise` and `Lower` layers are common between `ADORE` and `Dvorak`.
+The `Raise` and `Lower` layers are common between `ADORE` and `Dvorak`.
 
- ![Raise & Lower layers][layout:raise-lower:png]
+![Raise & Lower layers][layout:raise-lower:png]
 
  ([source][layout:raise-lower:src])([KLE][layout:raise-lower:kle])
 
