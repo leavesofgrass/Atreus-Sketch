@@ -15,7 +15,7 @@ This is my work in progress firmware Sketch for the [Atreus][atreus], using [Kal
 * [Typing layouts](#typing-layouts)
   - [ADORE](#adore)
   - [Dvorak](#dvorak)
-  - [Raise & Lower](#raise-lower)
+  - [Raise & Lower](#raise--lower)
 * [Games](#games)
   - [The Elder Scrolls Online](#the-elder-scrolls-online)
 * [Plugins used](#plugins-used)
