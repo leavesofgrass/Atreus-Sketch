@@ -18,4 +18,15 @@
 
 #pragma once
 
-enum { ADORE, DVORAK, LOWER, RAISE, GAMES, TESO, AUX };
+enum {
+  /* Typing layers */
+  ADORE,
+  DVORAK,
+  LOWER,
+  RAISE,
+  /* Game layers */
+  GAMES,
+  /* The Elder Scrolls Online */
+  TESO,
+  AUX
+};
