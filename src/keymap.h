@@ -108,10 +108,10 @@ KEYMAPS(
 
   [AUX] = KEYMAP_STACKED
   (
-       XXX       ,Key_P  ,Key_M ,Key_U ,Key_J
-      ,Key_Quote ,XXX    ,Key_E ,Key_R ,Key_I
-      ,Key_F3    ,Key_F5 ,Key_X ,XXX   ,Key_K
-      ,___       ,Key_H  ,XXX   ,XXX   ,Key_Space ,Key_Enter
+       XXX       ,Key_P  ,Key_M ,Key_U         ,Key_J
+      ,Key_Quote ,XXX    ,Key_E ,Key_R         ,Key_I
+      ,Key_F3    ,Key_F5 ,Key_X ,XXX           ,Key_K
+      ,___       ,Key_H  ,XXX   ,Key_Backspace ,Key_Space ,Key_Enter
 
            ,Key_1 ,Key_2 ,Key_3 ,XXX   ,XXX
            ,Key_4 ,Key_5 ,Key_6 ,Key_0 ,XXX
