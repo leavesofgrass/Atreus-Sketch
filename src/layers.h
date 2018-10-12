@@ -20,13 +20,13 @@
 
 enum {
   /* Typing layers */
-  ADORE,
-  DVORAK,
-  LOWER,
-  RAISE,
+  _ADORE,
+  _DVORAK,
+  _LOWER,
+  _RAISE,
   /* Game layers */
-  GAMES,
+  _GAMES,
   /* The Elder Scrolls Online */
-  TESO,
-  AUX
+  _TESO,
+  _AUX
 };
