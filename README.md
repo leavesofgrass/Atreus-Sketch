@@ -12,12 +12,15 @@ This is my work in progress firmware Sketch for the [Atreus][atreus], using [Kal
 
 ## Table of Contents
 
-* [Typing layout](#typing-layout)
-* [Dvorak](#dvorak)
-* Games
+* [Typing layouts](#typing-layouts)
+  - [ADORE](#adore)
+  - [Dvorak](#dvorak)
+* [Games](#games)
   - [The Elder Scrolls Online](#the-elder-scrolls-online)
 
-## Typing layout
+## Typing layouts
+
+### ADORE
 
 When the keyboard boots up, it starts in "typing mode", intended to input text. It uses the `ADORE` layout I'm working on.
 
@@ -29,7 +32,7 @@ When the keyboard boots up, it starts in "typing mode", intended to input text. 
  [layout:typing:src]: data/typing-layers.json
  [layout:typing:kle]: http://www.keyboard-layout-editor.com/#/gists/1945257744b53073795b0795e18b1ab1
 
-## Dvorak
+### Dvorak
 
 For times when I want to type faster than I type on `ADORE`, but can't use my main keyboard (like when silence is paramount, lest I wake the twins), having access to a `Dvorak` layer is useful.
 
@@ -41,8 +44,9 @@ For times when I want to type faster than I type on `ADORE`, but can't use my ma
  [layout:dvorak:src]: data/dvorak-layer.json
  [layout:dvorak:kle]: http://www.keyboard-layout-editor.com/#/gists/b7f98ff835c0c76d39d6740f18f5477f
 
+## Games
 
-## The Elder Scrolls Online
+### The Elder Scrolls Online
 
 ![The Elder Scrolls Online Layout][layout:teso:png]
 
