@@ -10,6 +10,13 @@ This is my work in progress firmware Sketch for the [Atreus][atreus], using [Kal
  [fw:model01]: https://git.madhouse-project.org/algernon/Model01-Sketch
  [fw:ergodox]: https://git.madhouse-project.org/algernon/ErgoDox-sketch
 
+## Table of Contents
+
+* [Typing layout](#typing-layout)
+* [Dvorak](#dvorak)
+* Games
+  - [The Elder Scrolls Online](#the-elder-scrolls-online)
+
 ## Typing layout
 
 When the keyboard boots up, it starts in "typing mode", intended to input text. It uses the `ADORE` layout I'm working on.
