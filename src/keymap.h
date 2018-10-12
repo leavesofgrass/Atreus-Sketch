@@ -42,6 +42,22 @@
 #define MO(n) ShiftToLayer(n)
 
 /* *INDENT-OFF* */
+
+/* Empty layer:
+  [NAME] = KEYMAP_STACKED
+  (
+       XXX ,XXX ,XXX ,XXX ,XXX
+      ,XXX ,XXX ,XXX ,XXX ,XXX
+      ,XXX ,XXX ,XXX ,XXX ,XXX
+      ,XXX ,XXX ,XXX ,XXX ,XXX ,XXX
+
+           ,XXX ,XXX ,XXX ,XXX ,XXX
+           ,XXX ,XXX ,XXX ,XXX ,XXX
+           ,XXX ,XXX ,XXX ,XXX ,XXX
+      ,XXX ,XXX ,XXX ,XXX ,XXX ,XXX
+  ),
+ */
+
 KEYMAPS(
   [ADORE] = KEYMAP_STACKED(
        Key_Quote  ,Key_W       ,Key_C   ,Key_H   ,Key_F
@@ -77,7 +93,7 @@ KEYMAPS(
                  ,Key_Semicolon ,Key_1     ,Key_2            ,Key_3        ,Key_Equals
                  ,Key_0         ,Key_4     ,Key_5            ,Key_6        ,Key_Plus
                  ,Key_Period    ,Key_7     ,Key_8            ,Key_9        ,Key_Underscore
-      ,Key_Enter ,Key_Space     ,Key_Minus ,OSM(LeftControl) ,OSM(LeftAlt) ,M(M_TESO)
+      ,Key_Enter ,Key_Space     ,Key_Minus ,OSM(LeftControl) ,OSM(LeftAlt) ,OSL(GAMES)
   ),
 
   [RAISE] = KEYMAP_STACKED
@@ -85,12 +101,25 @@ KEYMAPS(
        Key_MNext   ,Key_LeftBracket ,Key_RightBracket ,Key_LeftParen ,Key_RightParen
       ,Key_MPlay   ,Key_LeftCurly   ,Key_RightCurly   ,XXX           ,XXX
       ,Key_Percent ,Key_Exclamation ,Key_Hash         ,Key_And       ,M(M_RESET)
-      ,M(M_TESO)   ,Key_LeftGui     ,Key_Esc          ,Key_Tab       ,Key_Backspace  ,OSM(LeftShift)
+      ,OSL(GAMES)  ,Key_LeftGui     ,Key_Esc          ,Key_Tab       ,Key_Backspace  ,OSM(LeftShift)
 
                  ,Key_VolInc ,Key_F1    ,Key_F2           ,Key_F3       ,Key_F10
                  ,Key_VolDec ,Key_F4    ,Key_F5           ,Key_F6       ,Key_F11
                  ,Key_Period ,Key_F7    ,Key_F8           ,Key_F9       ,Key_F12
       ,Key_Enter ,Key_Space  ,Key_Minus ,OSM(LeftControl) ,OSM(LeftAlt) ,OSL(RAISE)
+  ),
+
+  [GAMES] = KEYMAP_STACKED
+  (
+       XXX ,XXX ,XXX       ,XXX ,XXX
+      ,XXX ,XXX ,M(M_TESO) ,XXX ,XXX
+      ,XXX ,XXX ,XXX       ,XXX ,XXX
+      ,XXX ,XXX ,XXX       ,XXX ,XXX ,XXX
+
+           ,XXX ,XXX ,XXX ,XXX ,XXX
+           ,XXX ,XXX ,XXX ,XXX ,XXX
+           ,XXX ,XXX ,XXX ,XXX ,XXX
+      ,XXX ,XXX ,XXX ,XXX ,XXX ,XXX
   ),
 
   [TESO] = KEYMAP_STACKED
