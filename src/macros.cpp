@@ -31,9 +31,13 @@ const macro_t *macroAction(uint8_t macroIndex, uint8_t keyState) {
   case M_RESET:
     Atreus.resetDevice();
     break;
-  case M_TYPING:
-    Layer.off(_TESO);
+  case M_TYPING: {
+    uint8_t layer = _ADORE;
+    if (Layer.isOn(_DVORAK))
+      layer = _DVORAK;
+    Layer.move(layer);
     break;
+  }
   }
 
   return MACRO_NONE;
