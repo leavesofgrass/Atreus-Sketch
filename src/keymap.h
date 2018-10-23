@@ -61,27 +61,27 @@
 
 KEYMAPS(
   [_ADORE] = KEYMAP_STACKED(
-       Key_Quote   ,Key_W       ,Key_C   ,Key_H   ,Key_F
-      ,Key_A       ,Key_O       ,Key_E   ,Key_I   ,Key_U
-      ,Key_Z       ,Key_Q       ,Key_X   ,Key_B   ,Key_Comma
-      ,OSL(_LOWER) ,Key_LeftGui ,Key_Esc ,Key_Tab ,Key_Backspace ,OSM(LeftShift)
+       Key_Quote ,Key_W       ,Key_C   ,Key_H       ,Key_F
+      ,Key_A     ,Key_O       ,Key_E   ,Key_I       ,Key_U
+      ,Key_Z     ,Key_Q       ,Key_X   ,Key_B       ,Key_Comma
+      ,Key_Esc   ,Key_LeftGui ,Key_Tab ,OSL(_LOWER) ,Key_Backspace ,OSM(LeftShift)
 
-                 ,Key_M      ,Key_G     ,Key_L            ,Key_P        ,Key_Slash
-                 ,Key_D      ,Key_R     ,Key_T            ,Key_N        ,Key_S
-                 ,Key_Period ,Key_K     ,Key_V            ,Key_Y        ,Key_J
-      ,Key_Enter ,Key_Space  ,Key_Minus ,OSM(LeftControl) ,OSM(LeftAlt) ,OSL(_RAISE)
+                 ,Key_M      ,Key_G       ,Key_L            ,Key_P        ,Key_Slash
+                 ,Key_D      ,Key_R       ,Key_T            ,Key_N        ,Key_S
+                 ,Key_Period ,Key_K       ,Key_V            ,Key_Y        ,Key_J
+      ,Key_Enter ,Key_Space  ,OSL(_RAISE) ,OSM(LeftControl) ,OSM(LeftAlt) ,Key_Minus
   ),
 
   [_DVORAK] = KEYMAP_STACKED(
-       Key_Quote   ,Key_Comma   ,Key_Period ,Key_P   ,Key_Y
-      ,Key_A       ,Key_O       ,Key_E      ,Key_U   ,Key_I
-      ,Key_Slash   ,Key_Q       ,Key_J      ,Key_K   ,Key_X
-      ,OSL(_LOWER) ,Key_LeftGui ,Key_Esc    ,Key_Tab ,Key_Backspace ,OSM(LeftShift)
+       Key_Quote ,Key_Comma   ,Key_Period ,Key_P       ,Key_Y
+      ,Key_A     ,Key_O       ,Key_E      ,Key_U       ,Key_I
+      ,Key_Slash ,Key_Q       ,Key_J      ,Key_K       ,Key_X
+      ,Key_Esc   ,Key_LeftGui ,Key_Tab    ,OSL(_LOWER) ,Key_Backspace ,OSM(LeftShift)
 
-                 ,Key_F     ,Key_G     ,Key_C            ,Key_R        ,Key_L
-                 ,Key_D     ,Key_H     ,Key_T            ,Key_N        ,Key_S
-                 ,Key_B     ,Key_M     ,Key_W            ,Key_V        ,Key_Z
-      ,Key_Enter ,Key_Space ,Key_Minus ,OSM(LeftControl) ,OSM(LeftAlt) ,OSL(_RAISE)
+                 ,Key_F     ,Key_G       ,Key_C            ,Key_R        ,Key_L
+                 ,Key_D     ,Key_H       ,Key_T            ,Key_N        ,Key_S
+                 ,Key_B     ,Key_M       ,Key_W            ,Key_V        ,Key_Z
+      ,Key_Enter ,Key_Space ,OSL(_RAISE) ,OSM(LeftControl) ,OSM(LeftAlt) ,Key_Minus
   ),
 
   [_LOWER] = KEYMAP_STACKED
@@ -89,12 +89,12 @@ KEYMAPS(
        Key_Backtick  ,Key_Home      ,Key_UpArrow   ,Key_End        ,Key_PageUp
       ,Key_Backslash ,Key_LeftArrow ,Key_DownArrow ,Key_RightArrow ,Key_PageDown
       ,Key_At        ,Key_Star      ,Key_Dollar    ,Key_Caret      ,Key_Comma
-      ,OSL(_LOWER)   ,Key_LeftGui   ,Key_Esc       ,Key_Tab        ,Key_Backspace ,OSM(LeftShift)
+      ,Key_Esc       ,Key_LeftGui   ,Key_Tab       ,OSL(_LOWER)    ,Key_Backspace ,OSM(LeftShift)
 
-                 ,Key_Semicolon ,Key_1     ,Key_2            ,Key_3        ,Key_Equals
-                 ,Key_0         ,Key_4     ,Key_5            ,Key_6        ,Key_Plus
-                 ,Key_Period    ,Key_7     ,Key_8            ,Key_9        ,Key_Underscore
-      ,Key_Enter ,Key_Space     ,Key_Minus ,OSM(LeftControl) ,OSM(LeftAlt) ,OSL(_GAMES)
+                 ,Key_Semicolon ,Key_1       ,Key_2            ,Key_3        ,Key_Equals
+                 ,Key_0         ,Key_4       ,Key_5            ,Key_6        ,Key_Plus
+                 ,Key_Period    ,Key_7       ,Key_8            ,Key_9        ,Key_Underscore
+      ,Key_Enter ,Key_Space     ,OSL(_GAMES) ,OSM(LeftControl) ,OSM(LeftAlt) ,Key_Minus
   ),
 
   [_RAISE] = KEYMAP_STACKED
@@ -102,12 +102,12 @@ KEYMAPS(
        Key_MNext   ,Key_LeftBracket ,Key_RightBracket ,Key_LeftParen ,Key_RightParen
       ,Key_MPlay   ,Key_LeftCurly   ,Key_RightCurly   ,XXX           ,XXX
       ,Key_Percent ,Key_Exclamation ,Key_Hash         ,Key_And       ,M(M_RESET)
-      ,OSL(_GAMES) ,Key_LeftGui     ,Key_Esc          ,Key_Tab       ,Key_Backspace  ,OSM(LeftShift)
+      ,Key_Esc     ,Key_LeftGui     ,Key_Tab          ,OSL(_GAMES)   ,Key_Backspace ,OSM(LeftShift)
 
-                 ,Key_VolInc ,Key_F1    ,Key_F2           ,Key_F3       ,Key_F10
-                 ,Key_VolDec ,Key_F4    ,Key_F5           ,Key_F6       ,Key_F11
-                 ,Key_Period ,Key_F7    ,Key_F8           ,Key_F9       ,Key_F12
-      ,Key_Enter ,Key_Space  ,Key_Minus ,OSM(LeftControl) ,OSM(LeftAlt) ,OSL(_RAISE)
+                 ,Key_VolInc ,Key_F1      ,Key_F2           ,Key_F3       ,Key_F10
+                 ,Key_VolDec ,Key_F4      ,Key_F5           ,Key_F6       ,Key_F11
+                 ,Key_Period ,Key_F7      ,Key_F8           ,Key_F9       ,Key_F12
+      ,Key_Enter ,Key_Space  ,OSL(_RAISE) ,OSM(LeftControl) ,OSM(LeftAlt) ,Key_Minus
   ),
 
   [_GAMES] = KEYMAP_STACKED
