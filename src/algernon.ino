@@ -32,9 +32,8 @@
 #include "keymap.h"
 
 MAKE_FOCUS_VERSION_COMMAND("algernon/Atreus-Sketch",
-                           "https://git.madhouse-project.org/",
                            GIT_REV,
-                           "/src/commit/" GIT_FULLREV);
+                           KALEIDOSCOPE_GITREV);
 
 KALEIDOSCOPE_INIT_PLUGINS(
   CycleTimeReport,
