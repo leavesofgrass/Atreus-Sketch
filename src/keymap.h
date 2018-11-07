@@ -130,23 +130,23 @@ KEYMAPS(
       ,Key_A        ,Key_S ,Key_D           ,Key_F       ,Key_Esc
       ,OSL(_AUX)    ,Key_M ,Key_LeftControl ,Key_LeftAlt ,Key_Space ,Key_LeftShift
 
-                 ,XXX ,XXX ,XXX ,XXX ,XXX
-                 ,XXX ,XXX ,XXX ,XXX ,XXX
-                 ,XXX ,XXX ,XXX ,XXX ,XXX
-      ,OSL(_AUX) ,XXX ,XXX ,XXX ,XXX ,M(M_TYPING)
+           ,XXX ,XXX ,XXX ,XXX ,XXX
+           ,XXX ,XXX ,XXX ,XXX ,XXX
+           ,XXX ,XXX ,XXX ,XXX ,XXX
+      ,XXX ,XXX ,XXX ,XXX ,XXX ,M(M_TYPING)
   ),
 
   [_AUX] = KEYMAP_STACKED
   (
        XXX       ,Key_P  ,Key_M ,Key_U         ,Key_J
       ,Key_Quote ,XXX    ,Key_E ,Key_R         ,Key_I
-      ,Key_F3    ,Key_F5 ,Key_X ,XXX           ,Key_K
+      ,Key_F3    ,Key_F5 ,Key_X ,Key_Esc       ,Key_K
       ,___       ,Key_H  ,XXX   ,Key_Backspace ,Key_Space ,Key_Enter
 
-           ,Key_1 ,Key_2 ,Key_3 ,XXX   ,XXX
-           ,Key_4 ,Key_5 ,Key_6 ,Key_0 ,XXX
-           ,Key_7 ,Key_8 ,Key_9 ,XXX   ,XXX
-      ,___ ,XXX   ,XXX   ,XXX   ,XXX   ,M(M_TYPING)
+                 ,Key_1 ,Key_2 ,Key_3 ,XXX   ,XXX
+                 ,Key_4 ,Key_5 ,Key_6 ,Key_0 ,XXX
+                 ,Key_7 ,Key_8 ,Key_9 ,XXX   ,XXX
+      ,Key_Enter ,XXX   ,XXX   ,XXX   ,XXX   ,M(M_TYPING)
   ),
 )
 /* *INDENT-ON* */
