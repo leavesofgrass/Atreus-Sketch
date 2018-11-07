@@ -19,6 +19,7 @@
 
 #include "Kaleidoscope.h"
 #include "Kaleidoscope-Macros.h"
+#include "Kaleidoscope-USB-Quirks.h"
 
 #include "layers.h"
 #include "macros.h"
@@ -38,6 +39,9 @@ const macro_t *macroAction(uint8_t macroIndex, uint8_t keyState) {
     Layer.move(layer);
     break;
   }
+  case M_NKRO:
+    USBQuirks.toggleKeyboardProtocol();
+    break;
   }
 
   return MACRO_NONE;

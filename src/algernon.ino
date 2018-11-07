@@ -25,6 +25,7 @@
 #include "Kaleidoscope-Focus-Version.h"
 #include "Kaleidoscope-Macros.h"
 #include "Kaleidoscope-OneShot.h"
+#include "Kaleidoscope-USB-Quirks.h"
 
 #include "FocusCycleTime.h"
 #include "FocusLayout.h"
@@ -43,7 +44,8 @@ KALEIDOSCOPE_INIT_PLUGINS(
   FocusCycleTime,
   Macros,
   EscapeOneShot,
-  OneShot
+  OneShot,
+  USBQuirks
 );
 
 void setup() {

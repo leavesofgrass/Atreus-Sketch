@@ -100,7 +100,7 @@ KEYMAPS(
   [_RAISE] = KEYMAP_STACKED
   (
        Key_MNext   ,Key_LeftBracket ,Key_RightBracket ,Key_LeftParen ,Key_RightParen
-      ,Key_MPlay   ,Key_LeftCurly   ,Key_RightCurly   ,XXX           ,XXX
+      ,Key_MPlay   ,Key_LeftCurly   ,Key_RightCurly   ,XXX           ,M(M_NKRO)
       ,Key_Percent ,Key_Exclamation ,Key_Hash         ,Key_And       ,M(M_RESET)
       ,Key_Esc     ,Key_LeftGui     ,Key_Tab          ,OSL(_GAMES)   ,Key_Backspace ,OSM(LeftShift)
 

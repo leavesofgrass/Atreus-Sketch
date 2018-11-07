@@ -21,4 +21,5 @@
 enum {
   M_RESET,
   M_TYPING,
+  M_NKRO,
 };
