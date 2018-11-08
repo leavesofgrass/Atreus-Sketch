@@ -82,15 +82,17 @@ This sketch uses a moderate amount of plugins only, listed below.
 * [Hardware-Technomancy-Atreus][kaleidoscope:hardware-technomancy-atreus]
 * [Macros][kaleidoscope:macros]
 * [OneShot][kaleidoscope:oneshot]
+* [USB-Quirks][kaleidoscope:usb-quirks]
 
   [kaleidoscope:focus-version]: https://git.madhouse-project.org/algernon/Kaleidoscope-Focus-Version
-  [kaleidoscope:hardware-technomancy-atreus]: https://github.com/keyboardio/Kaleidoscope-Hardware-Technomancy-Atreus
-  [kaleidoscope:oneshot]: https://github.com/keyboardio/Kaleidoscope-OneShot
-  [kaleidoscope:macros]: https://github.com/keyboardio/Kaleidoscope-Macros
-  [kaleidoscope:focusserial]: https://github.com/keyboardio/Kaleidoscope-FocusSerial
-  [chrysalis]: https://github.com/algernon/Chrysalis
-  [kaleidoscope:cycletimereport]: https://github.com/keyboardio/Kaleidoscope-CycleTimeReport
-  [kaleidoscope:escape-oneshot]: https://github.com/keyboardio/Kaleidoscope-Escape-OneShot
+  [kaleidoscope:hardware-technomancy-atreus]: https://github.com/keyboardio/Kaleidoscope/blob/master/doc/plugin/Hardware-Technomancy-Atreus.md
+  [kaleidoscope:oneshot]: https://github.com/keyboardio/Kaleidoscope/blob/master/doc/plugin/OneShot.md
+  [kaleidoscope:macros]: https://github.com/keyboardio/Kaleidoscope/blob/master/doc/plugin/Macros.md
+  [kaleidoscope:focusserial]: https://github.com/keyboardio/Kaleidoscope/blob/master/doc/plugin/FocusSerial.md
+  [chrysalis]: https://github.com/keyboardio/chrysalis-bundle-keyboardio
+  [kaleidoscope:cycletimereport]: https://github.com/keyboardio/Kaleidoscope/blob/master/doc/plugin/CycleTimeReport.md
+  [kaleidoscope:escape-oneshot]: https://github.com/keyboardio/Kaleidoscope/blob/master/doc/plugin/Escape-OneShot.md
+  [kaleidoscope:usb-quirks]: https://github.com/keyboardio/Kaleidoscope/blob/master/doc/plugin/USB-Quirks.md
 
 # License
 
