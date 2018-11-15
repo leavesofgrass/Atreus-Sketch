@@ -20,6 +20,7 @@
 
 #include "layers.h"
 #include "macros.h"
+#include "tapdance.h"
 
 #define Key_Exclamation LSHIFT(Key_1)
 #define Key_At LSHIFT(Key_2)
@@ -91,7 +92,7 @@ KEYMAPS(
       ,Key_At        ,Key_Star      ,Key_Dollar    ,Key_Caret      ,Key_Comma
       ,Key_Esc       ,Key_LeftGui   ,Key_Tab       ,OSL(_LOWER)    ,Key_Backspace ,OSM(LeftShift)
 
-                 ,Key_Semicolon ,Key_1       ,Key_2            ,Key_3        ,Key_Equals
+                 ,TD(SEMICOLON) ,Key_1       ,Key_2            ,Key_3        ,Key_Equals
                  ,Key_0         ,Key_4       ,Key_5            ,Key_6        ,Key_Plus
                  ,Key_Period    ,Key_7       ,Key_8            ,Key_9        ,Key_Underscore
       ,Key_Enter ,Key_Space     ,OSL(_GAMES) ,OSM(LeftControl) ,OSM(LeftAlt) ,Key_Minus

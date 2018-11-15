@@ -16,44 +16,19 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-#include "00-config.h"
 
 #include "Kaleidoscope.h"
-#include "Kaleidoscope-CycleTimeReport.h"
-#include "Kaleidoscope-Escape-OneShot.h"
-#include "Kaleidoscope-FocusSerial.h"
-#include "Kaleidoscope-Focus-Version.h"
-#include "Kaleidoscope-Macros.h"
-#include "Kaleidoscope-OneShot.h"
 #include "Kaleidoscope-TapDance.h"
-#include "Kaleidoscope-USB-Quirks.h"
 
-#include "FocusCycleTime.h"
-#include "FocusLayout.h"
+#include "tapdance.h"
 
-#include "keymap.h"
-
-MAKE_FOCUS_VERSION_COMMAND("algernon/Atreus-Sketch",
-                           GIT_REV,
-                           KALEIDOSCOPE_GITREV);
-
-KALEIDOSCOPE_INIT_PLUGINS(
-  CycleTimeReport,
-  Focus,
-  FocusVersionCommand,
-  FocusLayout,
-  FocusCycleTime,
-  Macros,
-  EscapeOneShot,
-  OneShot,
-  TapDance,
-  USBQuirks
-);
-
-void setup() {
-  Kaleidoscope.setup();
-}
-
-void loop() {
-  Kaleidoscope.loop();
+void tapDanceAction(uint8_t tap_dance_index,
+                    byte row, byte col,
+                    uint8_t tap_count,
+                    kaleidoscope::TapDance::ActionType tap_dance_action) {
+  switch (tap_dance_index) {
+    case SEMICOLON:
+      return tapDanceActionKeys(tap_count, tap_dance_action,
+                                Key_Semicolon, LSHIFT(Key_Semicolon));
+  }
 }

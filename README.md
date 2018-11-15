@@ -82,6 +82,7 @@ This sketch uses a moderate amount of plugins only, listed below.
 * [Hardware-Technomancy-Atreus][kaleidoscope:hardware-technomancy-atreus]
 * [Macros][kaleidoscope:macros]
 * [OneShot][kaleidoscope:oneshot]
+* [TapDance][kaleidoscope:tapdance]
 * [USB-Quirks][kaleidoscope:usb-quirks]
 
   [kaleidoscope:focus-version]: https://git.madhouse-project.org/algernon/Kaleidoscope-Focus-Version
@@ -93,6 +94,7 @@ This sketch uses a moderate amount of plugins only, listed below.
   [kaleidoscope:cycletimereport]: https://github.com/keyboardio/Kaleidoscope/blob/master/doc/plugin/CycleTimeReport.md
   [kaleidoscope:escape-oneshot]: https://github.com/keyboardio/Kaleidoscope/blob/master/doc/plugin/Escape-OneShot.md
   [kaleidoscope:usb-quirks]: https://github.com/keyboardio/Kaleidoscope/blob/master/doc/plugin/USB-Quirks.md
+  [kaleidoscope:tapdance]: https://github.com/keyboardio/Kaleidoscope/blob/master/doc/plugin/TapDance.md
 
 # License
 
