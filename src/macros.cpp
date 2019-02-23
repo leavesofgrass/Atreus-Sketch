@@ -34,7 +34,7 @@ const macro_t *macroAction(uint8_t macroIndex, uint8_t keyState) {
     break;
   case M_TYPING: {
     uint8_t layer = _ADORE;
-    if (Layer.isOn(_DVORAK))
+    if (Layer.isActive(_DVORAK))
       layer = _DVORAK;
     Layer.move(layer);
     break;

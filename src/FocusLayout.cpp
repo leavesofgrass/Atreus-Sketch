@@ -39,11 +39,11 @@ EventHandlerResult FocusLayout::onSetup() {
 
 void FocusLayout::selectLayout(const char layout) {
   if (layout == 'a') {
-    Layer.off(_DVORAK);
-    Layer.on(_ADORE);
+    Layer.deactivate(_DVORAK);
+    Layer.activate(_ADORE);
   } else if (layout == 'd') {
-    Layer.off(_ADORE);
-    Layer.on(_DVORAK);
+    Layer.deactivate(_ADORE);
+    Layer.activate(_DVORAK);
   } else {
     return;
   }
@@ -69,7 +69,7 @@ EventHandlerResult FocusLayout::onFocusEvent(const char *command) {
   selectLayout(layout);
 
 report:
-  Serial.println(Layer.isOn(_ADORE) ? "a" : "d");
+  Serial.println(Layer.isActive(_ADORE) ? "a" : "d");
   return EventHandlerResult::EVENT_CONSUMED;
 }
 }
