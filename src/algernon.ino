@@ -20,6 +20,8 @@
 
 #include "Kaleidoscope.h"
 #include "Kaleidoscope-CycleTimeReport.h"
+#include <Kaleidoscope-EEPROM-Keymap.h>
+#include <Kaleidoscope-EEPROM-Settings.h>
 #include "Kaleidoscope-Escape-OneShot.h"
 #include "Kaleidoscope-FocusSerial.h"
 #include "Kaleidoscope-Focus-Version.h"
@@ -39,7 +41,11 @@ MAKE_FOCUS_VERSION_COMMAND("algernon/Atreus-Sketch",
 
 KALEIDOSCOPE_INIT_PLUGINS(
   CycleTimeReport,
+  EEPROMSettings,
+  EEPROMKeymap,
   Focus,
+  FocusEEPROMCommand,
+  FocusSettingsCommand,
   FocusVersionCommand,
   FocusLayout,
   FocusCycleTime,
@@ -52,6 +58,7 @@ KALEIDOSCOPE_INIT_PLUGINS(
 
 void setup() {
   Kaleidoscope.setup();
+  EEPROMKeymap.setup(7);
 }
 
 void loop() {
